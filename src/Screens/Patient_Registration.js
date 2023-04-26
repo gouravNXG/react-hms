@@ -64,14 +64,14 @@ function renderRow(props) {
       <Paper elevation={3} sx={{paddingBottom: 3,backgroundColor:"#fbfbfb" ,}} >
       <Grid container spacing={2}>
         <Grid item xs={12} md={6} sm={6} lg={3}>
-        <InputLabel id="center-select-label"   sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 2,}} >Center
+        <InputLabel id="center-select-label"   sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 6,}} >Center
       <Select
         labelId="center-select-label"
         id="center-select"
         value={center}
         onChange={handleCenterChange}
         size="small"
-        sx={{ marginLeft: 6 }}
+        sx={{ marginLeft: 2 }}
       >
         <MenuItem value="emergency">Emergency Center</MenuItem>
         <MenuItem value="surgery">Surgery Center</MenuItem>
@@ -81,16 +81,16 @@ function renderRow(props) {
         </Grid>
         <Grid item xs={12} sm={6} md={6} lg={3}>
         <InputLabel 
-  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 3}}>
+  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 2}}>
   Receipt No
-  <TextField id="receiptNo" name="receiptNo" size="small" autoComplete="off" variant="outlined" placeholder="Enter Receipt No." sx={{ marginLeft: 3 }} />
+  <TextField id="receiptNo" name="receiptNo" size="small" autoComplete="off" variant="outlined" placeholder="Enter Receipt No." sx={{ marginLeft: 2 }} />
 </InputLabel>
 
         </Grid>
         <Grid item xs={12} md={6} sm={6} lg={3}>
       
 <InputLabel id="department-label"
- sx={{display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 2,}}>
+ sx={{display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 1,}}>
   Department
   <Select
     labelId="department-label"
@@ -100,7 +100,7 @@ function renderRow(props) {
     size="small"
     
     onChange={handleDepartmentChange}
-    sx={{ marginLeft: 1 }} >
+    sx={{ marginLeft: 2 }} >
 
 
 <MenuItem value="emergency">Emergency </MenuItem>
@@ -112,7 +112,7 @@ function renderRow(props) {
         <Grid item xs={12} md={6} sm={4} lg={3}>
         
         
-        <InputLabel htmlFor="date-picker"  sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end", fontWeight: 700,paddingLeft: 2}} >Date
+        <InputLabel htmlFor="date-picker"  sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end", fontWeight: 700,paddingLeft: 8}} >Date
     <TextField
       id="date-picker"
       type="date"
@@ -121,7 +121,7 @@ function renderRow(props) {
       InputLabelProps={{
         shrink: true,
       }}
-      sx={{ marginLeft: 1, }}
+      sx={{ marginLeft: 2, }}
     /> </InputLabel>
   </Grid>
 
@@ -129,39 +129,39 @@ function renderRow(props) {
       
 
 <InputLabel 
-  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 2}}>
+  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 5}}>
    Lab No.
-  <TextField id=" labNo" name="labNo" size="small" autoComplete="off" variant="outlined" placeholder="Enter Lab No." sx={{ marginLeft: 5 }} />
+  <TextField id=" labNo" name="labNo" size="small" autoComplete="off" variant="outlined" placeholder="Enter Lab No." sx={{ marginLeft: 2 }} />
 </InputLabel>
         </Grid>
 
   <Grid item xs={12} md={6} sm={4} lg={3}>
-  <InputLabel htmlFor="time" sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end", fontWeight: 700,paddingLeft:2}}>Time
+  <InputLabel htmlFor="time" sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end", fontWeight: 700,paddingLeft:8}}>Time
   <TextField
     id="time"
     type="time"
     size="small"
-   
+   fullWidth
     InputLabelProps={{
         shrink: true,
       }}
-    fullWidth
+   
 
-     sx={{ marginLeft: 7 ,}}
+     sx={{ marginLeft: 2 ,}}
   /></InputLabel>
   </Grid>
   <Grid item  lg={3}/>
 
         <Grid item xs={12} md={6} sm={6} lg={3}>
         <InputLabel 
-  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 2}}>
+  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 3}}>
   Patient ID
-  <TextField id="patientID" name="patientID" size="small" autoComplete="off" variant="outlined" placeholder="Enter Patient ID" sx={{ marginLeft: 3 }} />
+  <TextField id="patientID" name="patientID" size="small" autoComplete="off" variant="outlined" placeholder="Enter Patient ID" sx={{ marginLeft: 2 }} />
 </InputLabel>
          </Grid>
 <Grid item xs={12} md={6} sm={12} lg={6}>
 <InputLabel 
-  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 2}}>
+  sx={{ display: "flex", alignItems: "center", fontWeight: 700, }}>
   Patient Name
   <Select
     labelId="Patient-label"
@@ -179,7 +179,7 @@ function renderRow(props) {
     <TextField id="patientName" name="patientName" size="small" autoComplete="off" variant="outlined" placeholder="Enter Patient Name" sx={{ marginLeft: 1, width: '300px' }} />
 </InputLabel>       </Grid>
 <Grid item xs={12} md={6} sm={6} lg={3}>
-<InputLabel htmlFor="age-picker"  sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end", fontWeight: 700,paddingLeft: 2}} >Age
+<InputLabel htmlFor="age-picker"  sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end", fontWeight: 700,paddingLeft: 9}} >Age
     <TextField
       id="age-picker"
       type="number"
@@ -194,7 +194,7 @@ function renderRow(props) {
 
 <Grid item xs={12} md={6} sm={6} lg={3}>
 <InputLabel 
-  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 2}}>
+  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 6}}>
   Gender
   <Select
     labelId="Patient-label"
@@ -204,7 +204,7 @@ function renderRow(props) {
     size="small"
     
     onChange={handleGenderChange}
-    sx={{ marginLeft: 5 }} >
+    sx={{ marginLeft: 2 }} >
         <MenuItem value="first">Male </MenuItem>
         <MenuItem value="second">Female </MenuItem>
         </Select>
@@ -215,22 +215,22 @@ function renderRow(props) {
 
       <Grid item xs={12} md={6} sm={6} lg={3}>
        <InputLabel 
-  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 2}}>
+  sx={{ display: "flex", alignItems: "center", fontWeight: 700,}}>
           Father/Husband
-          <TextField id=" father/husband" name=" father/husband" size="small" autoComplete="off" variant="outlined" placeholder="Enter  Father/Husband " sx={{ marginLeft: 1 }} />
+          <TextField id=" father/husband" name=" father/husband" size="small" autoComplete="off" variant="outlined" placeholder="Enter  Father/Husband " />
 </InputLabel>
         
         </Grid>
         
         <Grid item xs={12} md={6} sm={6} lg={3}>
 <InputLabel 
-  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 2}}>
-  Mobile No. <TextField id=" mobileNo" type ="number " size="small" autoComplete="off" variant="outlined" placeholder="Enter Mobile No. " sx={{ marginLeft: 1 }} />
+  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 3}}>
+  Mobile No. <TextField id=" mobileNo" type ="number " size="small" autoComplete="off" variant="outlined" placeholder="Enter Mobile No. " sx={{ marginLeft: 2 }} />
 </InputLabel>
 
         </Grid>
         <Grid item xs={12} md={6} sm={4} lg={3}>
-        <InputLabel htmlFor="dob-picker"  sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end", fontWeight: 700,paddingLeft: 2}} >DOB
+        <InputLabel htmlFor="dob-picker"  sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end", fontWeight: 700,paddingLeft: 9}} >DOB
     <TextField
       id="dob-picker"
       type="date"
@@ -239,55 +239,55 @@ function renderRow(props) {
       InputLabelProps={{
         shrink: true,
       }}
-      sx={{ marginLeft: 1 }}
+      sx={{ marginLeft: 2 }}
     /> </InputLabel>
         </Grid>
        
         <Grid item xs={12} md={6} sm={6} lg={6}>
 
         <InputLabel 
-  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 2}}>
+  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 5}}>
           Address
-          <TextField id=" address" name=" address" size="small" autoComplete="off" variant="outlined" placeholder="Enter  Address" sx={{ marginLeft: 4, width: '400px' }} />
+          <TextField id=" address" name=" address" size="small" autoComplete="off" variant="outlined" placeholder="Enter  Address" sx={{ marginLeft: 2, width: '400px' }} />
 </InputLabel>
         </Grid>
         
         <Grid item xs={12} md={6} sm={6} lg={6}>
         <InputLabel 
-  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 2}}>
+  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 5}}>
           Email ID
-          <TextField id=" email" name=" email" type='email' size="small" autoComplete="off" variant="outlined" placeholder="Enter  Email ID" sx={{ marginLeft: 3 , width: '400px'}} />
+          <TextField id=" email" name=" email" type='email' size="small" autoComplete="off" variant="outlined" placeholder="Enter  Email ID" sx={{ marginLeft: 2 , width: '400px'}} />
 </InputLabel>
         </Grid>
 
         <Grid item xs={12} md={6} sm={6} lg={6}>
         <InputLabel 
-  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 2}}>
+  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 1}}>
          Referred By
-          <TextField id=" ReferredBy" name=" ReferredBy"  size="small" autoComplete="off" variant="outlined" placeholder="Enter ReferredBy" sx={{ marginLeft: 1, width:"400px" }} />
+          <TextField id=" ReferredBy" name=" ReferredBy"  size="small" autoComplete="off" variant="outlined" placeholder="Enter ReferredBy" sx={{ marginLeft: 2, width:"400px" }} />
 </InputLabel>
         </Grid>
         <Grid item xs={12} md={6} sm={12} lg={6}>
          <InputLabel 
-  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 2}}> <input type="checkbox"/>
+  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 1}}> <input type="checkbox"/>
         Corporate</InputLabel>
           </Grid>
           <Grid item xs={12} md={12} sm={12} lg={12}>
           <InputLabel 
-  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 2}}>
+  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 4}}>
         Remarks
-          <TextField id=" remarks" name=" remarks"  size="small" autoComplete="off" variant="outlined" placeholder="Enter Remarks" sx={{ marginLeft: 4 , width: '800px'}} />
+          <TextField id=" remarks" name=" remarks"  size="small" autoComplete="off" variant="outlined" placeholder="Enter Remarks" sx={{ marginLeft: 2 , width: '800px'}} />
 </InputLabel>
    </Grid>
         </Grid>
         </Paper>
        
-        <Paper elevation={5} sx={{marginTop: 5, backgroundColor:"#fbfbfb" ,}} >
+        <Paper elevation={5} sx={{marginTop: 5, backgroundColor:"#fbfbfb" }} >
         <Grid container spacing={2}>
         <Grid item xs={12} md={12} sm={12} lg={4}>
           
 <Box>
-        <TextField  id=" testName" name=" testName"  size="small" autoComplete="off" variant="outlined"  sx={{ marginLeft: 1 , width: '280px'}}></TextField>
+        <TextField  id=" testName" name=" testName"  size="small" autoComplete="off" variant="outlined"  sx={{ width: '300px'}}></TextField>
     <Box   
       sx={{ width: '100%', height: 240, maxWidth: 300, backgroundColor:"#c4dcdc" , marginLeft: 5 }}
     >
@@ -318,18 +318,18 @@ function renderRow(props) {
     ></Box>
     </Grid>
     <Grid item xs={12} md={12} sm={12} lg={4}  sx={{marginTop:5}}>
-    <InputLabel  sx={{ display: "flex",alignItems: "center", paddingLeft: 2,}} >Total Tests 
-    <TextField  id=" totalTest" name=" totalTest"  size="small" autoComplete="off" variant="outlined"  sx={{  marginLeft:6, marginBottom:1, width: '200px'}}></TextField></InputLabel>
-    <InputLabel  sx={{ display: "flex",alignItems: "center", paddingLeft: 2,}} >Test Amount  
-    <TextField  id=" testAmount" name=" testAmount"  size="small" autoComplete="off" variant="outlined"  sx={{  marginLeft:4.5, marginBottom:1, width: '200px'}}></TextField></InputLabel>
-    <InputLabel  sx={{ display: "flex",alignItems: "center", paddingLeft: 2,}} >Concession 
-    <TextField  id=" concession" name=" concession"  size="small" autoComplete="off" variant="outlined"  sx={{  marginLeft:5,marginBottom:1,  width: '200px'}}></TextField></InputLabel>
-    <InputLabel  sx={{ display: "flex",alignItems: "center", paddingLeft: 2,}} >Home Collection
-    <TextField  id=" homeCollection" name=" homeCollection"  size="small" autoComplete="off" variant="outlined"  sx={{  marginLeft:0.5, marginBottom:1, width: '200px'}}></TextField></InputLabel>
-    <InputLabel  sx={{ display: "flex",alignItems: "center", paddingLeft: 2,}} >Net Amount
-    <TextField  id=" netAmount" name=" netAmount"  size="small" autoComplete="off" variant="outlined"  sx={{  marginLeft:5, marginBottom:1, width: '200px'}}></TextField></InputLabel>
-    <InputLabel  sx={{ display: "flex",alignItems: "center", paddingLeft: 2,}} >Balance
-    <TextField  id=" homeCollection" name=" homeCollection"  size="small" autoComplete="off" variant="outlined"  sx={{  marginLeft:8, marginBottom:1, width: '200px'}}></TextField>
+    <InputLabel  sx={{ display: "flex",alignItems: "center", paddingLeft: 6,}} >Total Tests 
+    <TextField  id=" totalTest" name=" totalTest"  size="small" autoComplete="off" variant="outlined"  sx={{  marginLeft:2, marginBottom:1, width: '200px'}}></TextField></InputLabel>
+    <InputLabel  sx={{ display: "flex",alignItems: "center", paddingLeft: 4,}} >Test Amount  
+    <TextField  id=" testAmount" name=" testAmount"  size="small" autoComplete="off" variant="outlined"  sx={{  marginLeft:2, marginBottom:1, width: '200px'}}></TextField></InputLabel>
+    <InputLabel  sx={{ display: "flex",alignItems: "center", paddingLeft: 5,}} >Concession 
+    <TextField  id=" concession" name=" concession"  size="small" autoComplete="off" variant="outlined"  sx={{  marginLeft:2,marginBottom:1,  width: '200px'}}></TextField></InputLabel>
+    <InputLabel  sx={{ display: "flex",alignItems: "center", paddingLeft:1}} >Home Collection
+    <TextField  id=" homeCollection" name=" homeCollection"  size="small" autoComplete="off" variant="outlined"  sx={{  marginLeft:2, marginBottom:1, width: '200px'}}></TextField></InputLabel>
+    <InputLabel  sx={{ display: "flex",alignItems: "center", paddingLeft: 5,}} >Net Amount
+    <TextField  id=" netAmount" name=" netAmount"  size="small" autoComplete="off" variant="outlined"  sx={{  marginLeft:2, marginBottom:1, width: '200px'}}></TextField></InputLabel>
+    <InputLabel  sx={{ display: "flex",alignItems: "center", paddingLeft: 8,}} >Balance
+    <TextField  id=" homeCollection" name=" homeCollection"  size="small" autoComplete="off" variant="outlined"  sx={{  marginLeft:2, marginBottom:1, width: '200px'}}></TextField>
    </InputLabel>
     </Grid>
     <Grid item xs={12} md={12} sm={12} lg={4}>

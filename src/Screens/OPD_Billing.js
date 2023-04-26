@@ -3,7 +3,7 @@ import React from 'react'
 export default function OPD_Billing() {
   return (
     <div>
-           <h1>gourav</h1>
+           <h1>NXG --- OPD_Billing</h1>
     </div>
   )
 }

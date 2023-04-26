@@ -1,167 +1,3 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { Drawer, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
-// import { AccountBox, PeopleAlt, AttachMoney, AddBox } from '@mui/icons-material';
-
-// const navLinks = [
-//   { title: 'Patient Registration', icon: <AddBox />, path: '/patient-registration' },
-//   { title: 'OPD Patients', icon: <PeopleAlt />, path: '/opd-patients' },
-//   { title: 'IPD Patients', icon: <AccountBox />, path: '/ipd-patients' },
-//   { title: 'OPD Billing', icon: <AttachMoney />, path: '/opd-billing' },
-// ];
-
-// const LeftNavbar = () => {
-//   const [open, setOpen] = React.useState(false);
-
-//   const handleDrawer = () => {
-//     setOpen(!open);
-//   };
-
-//   return (
-//     <div>
-//       <Drawer anchor="left" open={open} onClose={handleDrawer}>
-//         <List>
-//           {navLinks.map((link) => (
-//             <ListItem button key={link.title} component={Link} to={link.path}>
-//               <ListItemIcon>{link.icon}</ListItemIcon>
-//               <ListItemText primary={link.title} />
-//             </ListItem>
-//           ))}
-//         </List>
-//       </Drawer>
-//       <button onClick={handleDrawer}>Open Navbar</button>
-//     </div>
-//   );
-// };
-
-// export default LeftNavbar;
-
-// import React from 'react';
-// import { Drawer, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
-// import { Link } from 'react-router-dom';
-// import { PersonAdd, AccountBox, LocalHospital, MonetizationOn } from '@mui/icons-material';
-
-// const LeftNavBar = () => {
-//   // const [open, setOpen] = React.useState(true);
-
-//   // const handleDrawer = () => {
-//   //   setOpen(open);
-//   // };
-
-//   const navLinks = [
-//     { title: 'Patient Registration', path: '/patient-registration', icon: <PersonAdd /> },
-//     { title: 'OPD Patients', path: '/opd-patients', icon: <AccountBox /> },
-//     { title: 'IPD Patients', path: '/ipd-patients', icon: <LocalHospital /> },
-//     { title: 'OPD Billing', path: '/opd-billing', icon: <MonetizationOn /> },
-//   ];
-
-//   return (
-//     <div>
-//       <Drawer anchor="left"
-//        >
-//         <List>
-//           {navLinks.map((link) => (
-//             <ListItem button key={link.title} component={Link} to={link.path}>
-//               <ListItemIcon>{link.icon}</ListItemIcon>
-//               <ListItemText primary={link.title} />
-//             </ListItem>
-//           ))}
-//         </List>
-//       </Drawer>
-//     </div>
-//   );
-// };
-
-// export default LeftNavBar;
-
-// import React from 'react';
-// import {
-//   AppBar,
-//   Box,
-//   Drawer,
-//   IconButton,
-//   List,
-//   ListItem,
-//   ListItemIcon,
-//   ListItemText,
-//   Toolbar,
-// } from '@mui/material';
-// import MenuIcon from '@mui/icons-material/Menu';
-// import HomeIcon from '@mui/icons-material/Home';
-// import PeopleIcon from '@mui/icons-material/People';
-// import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-// import { Link } from 'react-router-dom';
-
-// const LeftNavBar = () => {
-//   const [open, setOpen] = React.useState(false);
-
-//   const handleDrawer = () => {
-//     setOpen(!open);
-//   };
-// <Toolbar/>
-//   const navLinks = [
-//     {
-//       title: 'Patient-Registration',
-//       path: '/Patient-Registration',
-//       icon: <HomeIcon />,
-//     },
-//     {
-//       title: 'OPD Patients',
-//       path: '/opd-patients',
-//       icon: <PeopleIcon />,
-//     },
-//     {
-//       title: 'IPD Patients',
-//       path: '/ipd-patients',
-//       icon: <PeopleIcon />,
-//     },
-//     {
-//       title: 'OPD Billing',
-//       path: '/opd-billing',
-//       icon: <AttachMoneyIcon />,
-//     },
-//   ];
-
-//   return (
-//     <div>
-//       <AppBar position="fixed">
-//         <Toolbar>
-//           <IconButton
-//             color="inherit"
-//             aria-label="open drawer"
-//             edge="start"
-//             onClick={handleDrawer}
-//             sx={{ mr: 2 }}
-//           >
-//             <MenuIcon />
-//           </IconButton>
-//           <ListItemText primary="My App" />
-//         </Toolbar>
-//       </AppBar>
-//       <Drawer anchor="left" open={open} onClose={handleDrawer}>
-//       <Box sx={{ overflow: 'auto' }} >
-//         <List>
-//           {navLinks.map((link) => (
-//             <ListItem
-//               button
-//               key={link.title}
-//               component={Link}
-//               to={link.path}
-//               onClick={handleDrawer}
-//             >
-//               <ListItemIcon>{link.icon}</ListItemIcon>
-//               <ListItemText primary={link.title} />
-//             </ListItem>
-//           ))}
-//         </List>
-//         </Box>
-//       </Drawer>
-//     </div>
-//   );
-// };
-
-// export default LeftNavBar;
-
 import * as React from "react";
 import { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
@@ -181,7 +17,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import PeopleIcon from "@mui/icons-material/People";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-
+import { InputLabel, TextField} from '@mui/material';
 import {
   useParams,
   useLocation,
@@ -191,6 +27,7 @@ import {
 } from "react-router-dom";
 import { Link } from "react-router-dom";
 import HMSAppBar from "./HMSAppBar";
+
 
 const drawerWidth = 240;
 
@@ -226,20 +63,25 @@ function LeftNavBar(props) {
   };
 
   const data = [
-    
+        
+    {
+      title: "Patient-Admission-Regular",
+      path: "/patient-admission-regular",
+      icon: <PeopleIcon />,
+    },
     {
       title: "Patient-Registration",
       path: "/Patient-Registration",
       icon: <PeopleIcon />,
     },
     {
-      title: "OPD Patients",
-      path: "/opd-patients",
+      title: "OPD Patients-Consultancy",
+      path: "/opd-patients-consultancy",
       icon: <PeopleIcon />,
     },
     {
-      title: "IPD Patients",
-      path: "/ipd-patients",
+      title: "OPD Patients",
+      path: "/opd-patients",
       icon: <PeopleIcon />,
     },
     {
@@ -252,8 +94,12 @@ function LeftNavBar(props) {
     <div>
       <Box sx={{ overflow: "auto" }}>
         <List>
-        <h4><HomeIcon />WE CARE</h4>
 
+        <InputLabel
+  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 3}} >
+    <HomeIcon sx={{ml:2 }}/> WE CARE
+</InputLabel>
+        <br/>
   
           {data.map((text, index) => (
            <ListItem key={index} disablePadding className={path === text.path ? "mshover active" : "mshover"} component={Link} to={text.path}>
