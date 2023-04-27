@@ -4,7 +4,6 @@ import LeftNavBar from './Components/LeftNavBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Patient_Registration from './Screens/Patient_Registration';
 import OPD_Patients from './Screens/OPD_Patients';
-import IPD_Patients from './Screens/IPD_Patients';
 import OPD_Billing from './Screens/OPD_Billing';
 import Patient_Admission_Regular from './Screens/Patient_Admission_Regular';
 function App() {
@@ -19,7 +18,6 @@ function App() {
           <Route path="/patient-admission-regular"  element={< Patient_Admission_Regular />} />
             <Route path="/patient-registration"  element={<Patient_Registration />} />
             <Route path="/opd-patients-consultancy" element={<OPD_Patients />} />
-            <Route path="/opd-patients" element={<IPD_Patients />} />
             <Route path="/opd-billing"  element={<OPD_Billing />} />
 
           </Routes>

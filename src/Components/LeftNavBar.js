@@ -65,23 +65,18 @@ function LeftNavBar(props) {
   const data = [
         
     {
-      title: "Patient-Admission-Regular",
+      title: "Patient Admission Regular",
       path: "/patient-admission-regular",
       icon: <PeopleIcon />,
     },
     {
-      title: "Patient-Registration",
+      title: "Patient Registration",
       path: "/Patient-Registration",
       icon: <PeopleIcon />,
     },
     {
-      title: "OPD Patients-Consultancy",
+      title: "OPD Patients Consultancy",
       path: "/opd-patients-consultancy",
-      icon: <PeopleIcon />,
-    },
-    {
-      title: "OPD Patients",
-      path: "/opd-patients",
       icon: <PeopleIcon />,
     },
     {

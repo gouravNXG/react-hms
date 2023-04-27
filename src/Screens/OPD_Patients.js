@@ -157,7 +157,7 @@ sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 11}}>
 
         <Grid item xs={12} md={12} sm={12} lg={6}>
 <InputLabel 
-  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 3}}>
+  sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 2}}>
   Alternate No. <TextField id=" alternateNo" type ="number " size="small" autoComplete="off" variant="outlined" placeholder="Enter Alternate No. " sx={{ marginLeft: 2 }} />
 </InputLabel>
 
@@ -225,8 +225,6 @@ sx={{ display: "flex", alignItems: "center", fontWeight: 700,  }}>
 </InputLabel>
 </Grid>
 <Grid item xs={12} md={12} sm={12} lg={6}>
-<Grid container>
-
 <InputLabel 
 sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 8}}>
   Ref. By 
@@ -234,7 +232,7 @@ sx={{ display: "flex", alignItems: "center", fontWeight: 700, paddingLeft: 8}}>
   <TextField id=" refBy" name=" refBy" size="small" autoComplete="off" variant="outlined" placeholder="Enter " sx={{ marginLeft: 2, width: '300px' }} /></Grid>
   
 </InputLabel>
-</Grid>
+
 </Grid>
 
 <Grid item xs={6} md={6} sm={6} lg={6}>
